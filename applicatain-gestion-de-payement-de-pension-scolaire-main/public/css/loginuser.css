@@ -1,0 +1,43 @@
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(to right, #4CAF50, #81C784);
+    }
+    .card {
+      max-width: 900px;
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      object-fit: cover;
+      height: 100%;
+    }
+    .form-container {
+      padding: 40px;
+    }
+    .form-control:focus {
+      border-color: #4CAF50;
+      box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+    }
+    .input-group {
+      position: relative;
+    }
+    .toggle-password {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #6c757d;
+      z-index: 2;
+    }
+    .feedback {
+      font-size: 14px;
+    }
+  

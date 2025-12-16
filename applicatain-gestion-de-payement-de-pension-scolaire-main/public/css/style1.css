@@ -1,0 +1,109 @@
+body {
+    font-size: .9rem; /* Taille de police légère */
+    background-color: #f8f9fa;
+}
+
+/* Styles pour le menu latéral (Sidebar) */
+.sidebar {
+    position: fixed; /* Fixe le menu */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030; /* Assure qu'il est au-dessus du contenu simple */
+    padding: 0;
+    background: linear-gradient(180deg, #2c3e50 0%, #1a252f 100%); /* Dégradé sombre */
+    color: #adb5bd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Ombre portée plus visible */
+    transition: transform .3s ease-in-out;
+}
+
+/* Styles spécifiques pour l'affichage mobile (offcanvas) */
+@media (max-width: 767.98px) {
+    .sidebar.offcanvas {
+        width: 280px; /* Largeur standard pour offcanvas */
+        background: linear-gradient(180deg, #2c3e50 0%, #1a252f 100%); /* Répéter le fond */
+    }
+    /* Ajoute de l'espace en haut du contenu principal pour la navbar mobile fixe */
+    .main-content {
+        padding-top: 60px; /* Ajuster si la hauteur de la navbar mobile change */
+    }
+}
+
+/* En-tête du menu latéral */
+.sidebar-header {
+    background-color: rgba(0, 0, 0, 0.2); /* Fond transparent noir */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header .navbar-brand {
+    padding: 0;
+    margin: 0;
+    color: #ffffff !important; /* Assurer la couleur blanche */
+}
+
+/* Styles des liens de navigation */
+.sidebar .nav-link {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75); /* Couleur de texte des liens */
+    padding: .8rem 1.5rem; /* Espacement interne */
+    display: flex;
+    align-items: center;
+    border-left: 4px solid transparent; /* Bordure gauche pour l'état actif */
+    transition: background-color 0.2s ease, color 0.2s ease, border-left-color 0.2s ease;
+}
+
+.sidebar .nav-link i {
+    width: 22px; /* Espace pour l'icône */
+    text-align: center;
+    font-size: 1.15rem; /* Taille de l'icône */
+    margin-right: 12px; /* Espacement entre icône et texte (remplace me-2) */
+    opacity: 0.8;
+     transition: opacity 0.2s ease;
+}
+
+/* Effet au survol */
+.sidebar .nav-link:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-left-color: rgba(255, 255, 255, 0.5); /* Bordure légère au survol */
+}
+.sidebar .nav-link:hover i {
+    opacity: 1;
+}
+
+/* État actif */
+.sidebar .nav-link.active {
+    color: #ffffff;
+    background-color: rgba(0, 123, 255, 0.2); /* Fond bleu semi-transparent */
+    border-left-color: #0d6efd; /* Bordure bleue vive */
+    font-weight: 600; /* Texte en gras */
+}
+.sidebar .nav-link.active i {
+     opacity: 1;
+}
+
+/* Séparateur */
+.sidebar-divider {
+    margin: 1rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Style spécifique pour le lien de déconnexion */
+.sidebar .nav-link.link-logout {
+    color: #ffc107; /* Couleur jaune/orange */
+}
+.sidebar .nav-link.link-logout:hover {
+    color: #ffdca4; /* Plus clair au survol */
+    background-color: rgba(255, 193, 7, 0.1);
+    border-left-color: #ffc107;
+}
+
+/* Zone de contenu principal */
+.main-content {
+    padding-top: 1rem;
+}
+@media (min-width: 768px) {
+    .main-content {
+        padding-top: 1.5rem; /* Plus d'espace sur grand écran */
+    }
+}

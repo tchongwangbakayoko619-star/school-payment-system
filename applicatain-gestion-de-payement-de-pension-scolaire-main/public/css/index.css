@@ -1,0 +1,361 @@
+
+body {
+            background-color: #fff; /* Couleur de fond très claire (proche du blanc cassé avec une touche de bleu) */
+            font-family: sans-serif; /* Police de caractères professionnelle par défaut */
+        }
+        .developer-info {
+            background-color: #f8f9fa; /* Couleur de fond gris clair (Bootstrap like) */
+            color: #6c757d; /* Couleur de texte gris moyen (Bootstrap like) */
+            padding: 20px 0; /* Espacement vertical */
+            text-align: center; /* Centrer le texte */
+            font-size: 0.9em; /* Taille de police légèrement plus petite */
+            border-top: 1px solid #dee2e6; /* Bordure supérieure légère */
+            margin-top: 30px; /* Espacement au-dessus du pied de page, si nécessaire */
+        }
+        
+        .developer-info .container {
+            max-width: 1200px; /* Largeur maximale du conteneur (adaptez selon votre mise en page) */
+            margin: 0 auto; /* Centrer le conteneur */
+            padding: 0 20px; /* Espacement horizontal à l'intérieur du conteneur */
+        }
+        
+        .developer-info a {
+            color: #007bff; /* Couleur du lien bleu (Bootstrap like) */
+            text-decoration: none; /* Supprimer le soulignement par défaut */
+        }
+        
+        .developer-info a:hover {
+            text-decoration: underline; /* Souligner au survol */
+        }
+        
+        .developer-info small {
+            color: #adb5bd; /* Couleur du texte "version" encore plus claire */
+        }
+        .sidebar {
+            background-color:  #007bff; /* Bleu ciel plus clair pour la barre latérale (Powder Blue) */
+            color: #fff; /* Texte blanc pour un bon contraste */
+            min-height: 00vh;
+            padding-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centrer le logo horizontalement */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Légère ombre pour la séparation */
+        }
+
+        .sidebar .brand-logo {
+            padding: 1.5rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center; /* Aligner le texte et le symbole verticalement */
+            gap: 0.75rem; /* Espacement entre le texte et le symbole */
+        }
+
+        .sidebar .brand-logo .logo-text {
+            font-size: 1.2rem;
+            font-weight: 500; /* Police un peu moins grasse */
+            opacity: 1; /* Assurer une opacité pleine */
+            color: #fff; /* Texte du logo en blanc */
+        }
+
+      
+        @keyframes pulseSymbol {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+        .sidebar .nav-item {
+            margin-bottom: 0.75rem;
+            width: 100%; /* Les liens prennent toute la largeur de la barre latérale */
+        }
+
+        .sidebar .nav-link {
+            padding: 1rem 1.25rem;
+            color: #fff; /* Texte blanc par défaut */
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-radius 0.2s ease-in-out, transform 0.1s ease-in-out; /* Transition pour la taille de l'icône */
+            border-radius: 0.375rem; /* Légèrement arrondi par défaut pour un aspect plus doux */
+            align-items: center; /* Aligner l'icône et le texte verticalement */
+            display: flex;
+            opacity: 1; /* Assurer une opacité pleine */
+        }
+
+        .sidebar .nav-link i {
+            margin-right: 1rem; /* Espacement plus conséquent pour l'icône */
+            font-size: 1.2rem; /* Taille des icônes du menu */
+            transition: transform 0.1s ease-in-out; /* Transition pour l'effet au survol de l'icône */
+            opacity: 0.8; /* Légère transparence pour un aspect moins "brut" */
+            color: #fff; /* Icônes en blanc par défaut */
+        }
+
+        .sidebar .nav-link:hover {
+            background-color: #fff; /* Blanc au survol */
+            color: #007bff; /* Bleu Bootstrap primaire pour le texte au survol */
+            transform: translateX(5px); /* Léger décalage au survol pour l'interactivité */
+            opacity: 1; /* Assurer une opacité pleine au survol */
+        }
+
+        .sidebar .nav-link:hover i {
+            transform: scale(1.1); /* Léger agrandissement de l'icône au survol */
+            color: #007bff; /* Couleur de l'icône au survol */
+            opacity: 1; /* Assurer une opacité pleine au survol */
+        }
+
+        .sidebar .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.2); /* Blanc légèrement transparent pour l'actif */
+            color: #fff;
+            font-weight: 500; /* Texte un peu plus en évidence pour l'actif */
+            opacity: 1; /* Assurer une opacité pleine */
+        }
+
+        .sidebar .nav-link.active:hover {
+            background-color: #fff; /* Blanc au survol de l'actif */
+            color: #007bff; /* Texte bleu au survol de l'actif */
+            transform: translateX(5px);
+            opacity: 1; /* Assurer une opacité pleine au survol */
+        }
+
+        .content {
+            padding: 2.5rem;
+            background-color: #fff; /* Fond blanc pour le contenu principal */
+            border-left: 1px solid #eee; /* Séparation plus discrète avec la barre latérale */
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.05); /* Légère ombre sur le contenu */
+            opacity: 1; /* Assurer une opacité pleine */
+        }
+
+        #notifications-area {
+            background-color: #e0f7fa; /* Vert d'eau très clair pour la zone de notifications */
+            border: 1px solid #b2ebf2; /* Bordure verte d'eau claire */
+            padding: 1.25rem;
+            margin-bottom: 2rem;
+            border-radius: 0.375rem;
+            opacity: 1; /* Assurer une opacité pleine */
+        }
+
+        .alert {
+            padding: 1rem 1.25rem;
+            margin-bottom: 1rem;
+            border-radius: 0.375rem;
+            border: 1px solid transparent;
+            opacity: 1; /* Assurer une opacité pleine */
+        }
+
+        .alert-info {
+            background-color: #e3f2fd;
+            border-color: #c6dbed;
+            color: #1c63b6;
+            opacity: 1; /* Assurer une opacité pleine */
+        }
+
+        .alert-success {
+            background-color: #e6f9e8;
+            border-color: #b7e1cd;
+            color: #277244;
+            opacity: 1; /* Assurer une opacité pleine */
+        }
+
+        .alert-warning {
+            background-color: #fffde7;
+            border-color: #fff8c6;
+            color: #8a6d3b;
+            opacity: 1; /* Assurer une opacité pleine */
+        }
+
+        /* Button click animation */
+        .btn.clicked {
+            transform: scale(0.97);
+            transition: transform 0.1s ease-in-out;
+            opacity: 1; /* Assurer une opacité pleine */
+        }
+
+        /* Scroll to top button */
+        .scroll-to-top-btn {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            opacity: 0.75; /* Opacité légèrement réduite par défaut */
+            transition: opacity 0.3s ease-in-out;
+            z-index: 100;
+            background-color: #007bff; /* Bleu Bootstrap primaire pour le bouton */
+            color: white;
+            border: none;
+            border-radius: 0.375rem;
+            padding: 0.5rem 0.75rem;
+            font-size: 1rem;
+        }
+
+        .scroll-to-top-btn:hover {
+            opacity: 1; /* Opacité pleine au survol */
+            background-color: #0056b3; /* Bleu plus foncé au survol */
+        }
+
+        .scroll-to-top-btn.show {
+            opacity: 0.75;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 767.98px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: static;
+                margin-bottom: 1.5rem;
+                align-items: stretch; /* Étirer les éléments horizontalement */
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre en bas sur petit écran */
+            }
+            .sidebar .brand-logo {
+                justify-content: center; /* Centrer le logo sur les petits écrans */
+            }
+            .nav-item {
+                width: 100%;
+            }
+            .content {
+                padding: 1.5rem;
+                border-left: none; /* Supprime la bordure sur les petits écrans */
+                box-shadow: none; /* Supprime l'ombre sur le contenu sur petit écran */
+            }
+            .scroll-to-top-btn {
+                bottom: 1rem;
+                right: 1rem;
+            }
+        }
+        
+        .registration-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .registration-form h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-control {
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+        .form-select {
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1rem;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="#343a40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 1em;
+        }
+
+        .form-select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+        .upload-image-container {
+            border: 2px dashed #ced4da;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .upload-image-container i {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .upload-image-container p {
+            color: #6c757d;
+            margin-bottom: 0;
+        }
+
+        #studentImagePreview {
+            max-width: 150px;
+            max-height: 150px;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #6c757d;
+        }
+
+        .password-input-group {
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .content {
+                margin-left: 250px; /* Adjust based on sidebar width */
+            }
+        }
+        .alert-success {
+            color: green;
+            background-color: #f0fff0;
+            border: 1px solid green;
+            padding: 10px;
+           
+            margin-bottom: 20px;
+        }
+        .alert-danger {
+            color: red;
+            background-color: #ffe0e0;
+            border: 1px solid red;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        

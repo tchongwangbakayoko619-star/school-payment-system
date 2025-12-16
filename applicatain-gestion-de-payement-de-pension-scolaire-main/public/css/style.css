@@ -1,0 +1,256 @@
+/* Importation et application de la police Google Font */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* === CORRECTION Navbar Overlap === */
+    /* Augmentation du padding-top pour laisser plus d'espace à la navbar fixe */
+    /* Inspectez la hauteur réelle de votre navbar si 75px ne suffit pas */
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa; /* Fond général léger */
+}
+
+main {
+    flex: 1;
+}
+
+/* ================================= */
+/* Navbar Styling                    */
+/* ================================= */
+.navbar {
+    transition: background-color 0.3s ease;
+}
+.navbar-brand {
+    font-size: 1.4rem;
+}
+.navbar-nav .nav-link {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    padding: 0.6rem 1rem;
+    border-radius: 0.25rem;
+    margin: 0 0.1rem;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+/* Bouton Payer dans la Navbar */
+.navbar-nav .btn-warning {
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.navbar-nav .btn-warning:hover {
+    background-color: #ffca2c !important;
+    color: #333 !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateY(-1px);
+}
+
+/* ================================= */
+/* Welcome Section                   */
+/* ================================= */
+/* Styles de base via classes Bootstrap */
+
+/* ================================= */
+/* Quick Access Section              */
+/* ================================= */
+.quick-access {
+    background-color: #ffffff;
+    padding: 3rem 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.07);
+}
+
+.quick-access h2 {
+    margin-bottom: 3rem !important;
+}
+
+/* Cartes d'Accès Rapide */
+.custom-card {
+    position: relative;
+    overflow: hidden;
+    border: none !important;
+    color: white;
+    min-height: 220px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Overlay Gradient */
+.custom-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* === CORRECTION Lisibilité Carte === */
+    /* Gradient légèrement plus sombre pour améliorer le contraste */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.75) 100%);
+    transition: background-color 0.3s ease;
+    z-index: 1;
+    border-radius: inherit;
+}
+
+.custom-card .card-img-overlay {
+    position: relative;
+    z-index: 2;
+    background: none;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* === CORRECTION Lisibilité Carte === */
+/* Ajout d'une ombre portée subtile au texte des cartes */
+.custom-card .card-title,
+.custom-card .card-text {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/* IMPORTANT: Remplacez ces URLs par vos images */
+.card-pay {
+    background-image: url('https://img.freepik.com/premium-photo/african-woman-laptop-credit-card-sofa-house-ecommerce-payment-online-shopping-female-person-happy-digital-banking-internet-subscription-streaming-fast-food-order_590464-420131.jpg?w=1060');
+}
+.card-history {
+    background-image: url('https://img.freepik.com/free-photo/successful-happy-african-american-businessman-paying-bill-with-credit-card-online-via-internet_273609-9167.jpg?t=st=1745850936~exp=1745854536~hmac=65938e2c46ea7fd258e435201ab54a15c762251ed543f3afc828d6a3c789f079&w=1060');
+}
+.card-info {
+    background-image: url('https://img.freepik.com/free-photo/medium-shot-girl-wearing-backpack_23-2150903309.jpg?t=st=1745850685~exp=1745854285~hmac=1c70d7aefc7991cf310800caef34f571c712d6dc3c9725b880efaf83023744ab&w=740');
+}
+
+/* Effets de survol Carte */
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+.custom-card:hover::before {
+     /* Optionnel: Assombrir encore au survol si désiré */
+     background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.85) 100%);
+}
+
+.custom-card .card-icon {
+    color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.custom-card:hover .card-icon {
+    transform: scale(1.2);
+    color: #fff;
+}
+
+.custom-card .btn-light {
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: none;
+    padding: 0.5rem 1.2rem;
+    transition: all 0.3s ease;
+}
+.custom-card:hover .btn-light {
+    background-color: #fff;
+    color: var(--bs-primary);
+    transform: scale(1.05);
+}
+
+/* ================================= */
+/* Illustration Section Styling      */
+/* ================================= */
+.illustration-section .row {
+    overflow: hidden;
+}
+
+.illustration-section h2 {
+    line-height: 1.3;
+}
+
+.illustration-section .illustration-image {
+    max-height: 450px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 0.5rem;
+}
+
+.illustration-section .btn-warning {
+    font-weight: 600;
+}
+
+
+/* ================================= */
+/* Footer Styling                    */
+/* ================================= */
+footer {
+    background-color: #212529;
+}
+
+
+/* ================================= */
+/* Responsive Adjustments            */
+/* ================================= */
+@media (max-width: 991.98px) {
+    body {
+         /* === CORRECTION Navbar Overlap (Mobile) === */
+         /* Ajuster si la navbar mobile a une hauteur différente */
+        padding-top: 70px; /* Souvent la navbar est moins haute sur mobile */
+    }
+    .navbar-nav .nav-link {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 1rem;
+    }
+     .navbar-nav .nav-item .btn {
+         display: block;
+         width: 80%;
+         margin: 0.5rem auto;
+         text-align: center;
+     }
+     .navbar-collapse {
+        max-height: 75vh;
+        overflow-y: auto;
+     }
+
+     .quick-access {
+         padding: 2rem 1rem;
+     }
+     .quick-access h2 {
+         margin-bottom: 2.5rem !important;
+     }
+
+    /* Illustration section: image au-dessus du texte */
+    .illustration-section .order-lg-2 { order: 1; }
+    .illustration-section .order-lg-1 { order: 2; }
+    .illustration-section .illustration-image {
+        max-height: 300px;
+    }
+    .illustration-section .row {
+        padding: 1.5rem !important;
+    }
+    .illustration-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .welcome-section h1 {
+        font-size: 1.8rem;
+    }
+    .custom-card {
+        min-height: 180px;
+    }
+     .illustration-section h2 {
+        font-size: 1.6rem;
+    }
+     .illustration-section .btn-lg {
+         font-size: 1rem;
+         padding: 0.5rem 1rem;
+     }
+}
